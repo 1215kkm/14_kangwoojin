@@ -1,0 +1,65 @@
+@charset "UTF-8";
+
+@import url(reset.css);
+@import url(font.css);
+
+body {background: #000 url('../images/space1.jpg'); height: 3000px;}
+#wrap .space {position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    animation: spin 140s linear infinite;
+    background-size: 340px;
+    background-image: url('../images/space.svg');}
+@keyframes spin {
+    0% {transform: translate(-50%,-50%) rotate(0deg);}
+    100% {transform: translate(-50%,-50%) rotate(360deg);}
+}
+
+#section1 {width: 100%; height: 100vh; position: relative;}
+#section1:before {content: ""; position: absolute; width: 100%; height: 140px; background: #fff; bottom: 0;}
+#section1:after {content: ""; position: absolute; width: 1243px; height: 540px; left: 0; bottom: 0; background: url('../images/hill1.png');}
+
+#section1 .tv_box {width: 850px; height: 950px; position: absolute; left: 50%; margin-left: -1000px; bottom: 0;}
+#section1 .tv_box .tv {background: url('../images/monitor.png'); width: 100%; height: 100%;  position: absolute; z-index: 1; background-size: 100%; z-index: 2; top: 30px;}
+#section1 .tv_box .tv .screen {width: 370px; height: 350px; position: absolute; top:297px; left: 345px; }
+#section1 .tv_box .tv .screen img {width: 100%;}
+
+#section1 .tv_box .cable {position: absolute; bottom: 20px; left: 65%; z-index: 1;}
+#section1 .mobile {background: url('../images/mobile.png'); width: 278px; height: 520px; position: absolute; z-index: 1; left: 50%; bottom: 10px; margin-left: 350px; }
+#section1 .mobile:before,
+#section1 .mobile:after {content: ""; position: absolute; bottom: -10px; border: 10px solid #000; border-radius: 50%; width: 27px; height: 27px; background: #fa3877; right: -20px;}
+#section1 .mobile:before {left: -20px; background: #00b0ec; width: 40px; height: 40px;}
+
+#section1 .mobile .robot {position: absolute; width: 155px; height: 116px; background: url('../images/robot1.png'); left: 50%; transform: translate(-50%, -50%);}
+#section1 .mobile .robot .eye_left,
+#section1 .mobile .robot .eye_right,
+#section1 .mobile .robot .mouse {position: absolute;left: 50%;}
+
+#section1 .mobile .robot .eye_left {width: 13px; height: 13px; border-radius: 50%; margin-left: -29px; top: 50px;background: #00f3fe; }
+#section1 .mobile .robot .eye_right {width: 13px; height: 13px; border-radius: 50%; margin-left: 16px; top: 50px;background: #00f3fe; }
+#section1 .mobile .robot .mouse {width: 28px; height: 28px; top: 40px; transform: translateX(-50%); border: 5px solid transparent; border-bottom: 5px solid #00f3fe; border-radius: 50%;}
+
+#section1 .mobile ul {display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; height: 100%;}
+#section1 .mobile ul li {width: 210px; height: 40px; background: #000; border-radius: 10px; }
+#section1 .mobile ul li:first-child {background: #926d57; font-style: italic; display: flex; color: #fff; justify-content: center; align-items: center; }
+#section1 .mobile ul li a {display: flex; color: #fff; justify-content: center; align-items: center; height: 100%;}
+#section1 .mobile ul li:hover:not(:first-child) {
+    box-shadow: inset 0 0 20px rgba(48, 150, 176, 1),
+                inset 0 0 20px rgba(48, 150, 176, 1),
+                inset 0 0 20px rgba(48, 150, 176, 1);}
+
+.st0{fill:none;stroke:#FFFFFF;stroke-width:11;stroke-miterlimit:10;}
+.st1{fill:none;stroke:#926D57;stroke-width:11;stroke-miterlimit:10;}
+.st2{fill:none;stroke:#926D57;stroke-width:11;stroke-miterlimit:10;stroke-dasharray:39.3705,39.3705; stroke-dashoffset: .3705; animation: cable 2s infinite linear;}
+@keyframes cable {
+    0% {stroke-dashoffset: 0;}
+    100% {stroke-dashoffset: -78.3705;}
+}
+
+
+#section2 {width: 100%; height: 100vh; position: relative; background: #fff;}
+#section3 {width: 100%; height: 100vh; position: relative; background: #fff;}
+#section4 {width: 100%; position: relative; background: #fff;}
