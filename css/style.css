@@ -5,7 +5,7 @@
 
 .num {position: fixed; top: 0; left: 0; font-size: 50px; border: 1px solid #000; width: 100px;height: 100px; z-index: 7; display: flex; justify-content: center; align-items: center;}
 
-body {background: #000 url('../images/space1.jpg'); height: 3000px; width: 1920px;}
+body {background: #000 url('../images/space1.jpg'); height: 3000px; width: 1920px; overflow-x: hidden;}
 .subj {font-family: 'PyeongChangPeace-Light';}
 #wrap .space {position: fixed;
     width: 100vw;
@@ -22,10 +22,11 @@ body {background: #000 url('../images/space1.jpg'); height: 3000px; width: 1920p
 }
 
 .centerbox1600 {max-width: 1600px; margin: 0 auto}
+.centerbox1500 {max-width: 1500px; margin: 0 auto}
 
 #section1 {width: 100%; height: 100vh; position: relative;}
 #section1:before {content: ""; position: absolute; width: 100%; height: 140px; background: #fff; bottom: 0;}
-#section1:after {content: ""; position: absolute; width: 1243px; height: 540px; left: 0; bottom: 0; background: url('../images/hill1.png');}
+#section1:after {content: ""; position: absolute; width: 1243px; height: 540px; left: 0; bottom: 0; background: url('../images/hill1.png'); cursor: pointer;}
 
 #section1 .tv_box {width: 850px; height: 950px; position: absolute; left: 50%; margin-left: -1000px; bottom: 0;}
 #section1 .tv_box .tv {background: url('../images/monitor.png'); width: 100%; height: 100%;  position: absolute; z-index: 1; background-size: 100%; z-index: 2; top: 30px;}
@@ -119,11 +120,11 @@ section { padding: 120px 0;}
 #section2 .title_box .subj i {color: #4c76ef;}
 
 
-#section2 .content_box {max-width: 1200px; margin:100px auto 0 auto;}
-#section2 .content_box > ul {display: flex; flex-wrap: wrap; ;}
-#section2 .content_box > ul > li {width: 50%; box-sizing: border-box; border-left: 1px solid #000; position: relative; font-family: 'PyeongChangPeace-Light'; padding-bottom: 100px;}
-#section2 .content_box > ul > li h3 {position: absolute;transform: rotate(-90deg) translateX(-100%); font-size: 50px; left: 0; transform-origin: top left;}
-#section2 .content_box > ul > li .content {margin-left: 150px;}
+#section2 .content_box {max-width: 1400px; margin:150px auto 0 auto;}
+#section2 .content_box > ul {display: flex; flex-wrap: wrap; justify-content: flex-start; gap: 0 50px;}
+#section2 .content_box > ul > li {width: 30%; box-sizing: border-box; border-left: 1px solid #ccc; position: relative; font-family: 'PyeongChangPeace-Light'; padding-bottom: 50px;}
+#section2 .content_box > ul > li h3 {position: absolute;transform: rotate(-90deg) translateX(-100%); font-size: 40px; left: 0; transform-origin: top left; font-family: 'PyeongChangPeace-Bold';}
+#section2 .content_box > ul > li .content {margin-left: 100px;}
 #section2 .content_box > ul > li .content li {display: flex; gap: 50px; font-size: 20px;}
 #section2 .content_box > ul > li .content li p {padding: 20px 0;}
 #section2 .content_box > ul > li .content li p.tit {flex-basis: 60px; color: #064489; font-weight: bold;}
@@ -136,19 +137,20 @@ section { padding: 120px 0;}
 
 
 /* section3 */
-#section3 {width: 100%; height: 70vh; position: relative; background: #fff url('../images/bg_section3.jpg') 200px 0 no-repeat; background-attachment: fixed; }
-#section3 .title_box {margin-left: 200px; }
+#section3 {width: 100%; position: relative; background: #fff; background-attachment: fixed; margin-top: -300px; padding-top: 0; }
+#section3 .section3Bg {width: 90%; position: relative; background: url('../images/bg_section3.jpg')  no-repeat; background-attachment: fixed; margin: 0 auto; padding: 100px 0; box-sizing: border-box;}
+#section3 .title_box {margin-left: 130px; margin-bottom: 120px; }
 #section3 .title_box .title {margin:0 70px;}
 
 #section3 .planet1 {position: absolute; right: -300px; top: -200px;}
 #section3 .planet2 {position: absolute; left: -200px; bottom: -500px; z-index: 2;}
 
-#section3 .content_box {margin-left: 300px;}
+#section3 .content_box {margin-left: 200px;}
 #section3 .content_box ul {display: flex; width: 1000px; flex-wrap: wrap; gap: 60px 120px; margin-top: 80px;}
-#section3 .content_box ul li {width: 380px; height: 80px; border-radius: 80px; background: #000; position: relative; border: 7px solid #fff; align-items: center; display: flex; align-items: center;}
-#section3 .content_box ul li a {display: block; height: 100%; width: 100%; box-sizing: border-box; }
-#section3 .content_box ul li p {color: #fff; font-size: 26px; font-family: 'PyeongChangPeace-Light'; padding-left: 20px; height: 100%; display: flex; align-items: center;}
-#section3 .content_box ul li .robot_hole {width: 60px; height: 60px; position: absolute; background: red; border-radius: 50%;  right: 20px; top: 10px;}
+#section3 .content_box ul li {width: 380px; height: 100px; border-radius: 80px; background: url('../images/bt_img.jpg'); position: relative; border: 7px solid #fff; align-items: center; display: flex; align-items: center;}
+#section3 .content_box ul li a {display: block; height: 100%; width: 100%; box-sizing: border-box; padding-left: 30px;}
+#section3 .content_box ul li p {color: #fff; font-size: 30px; font-family: 'PyeongChangPeace-Light'; padding-left: 20px; height: 100%; display: flex; align-items: center;}
+#section3 .content_box ul li .robot_hole {width: 60px; height: 60px; position: absolute; background: #545b78; border-radius: 50%;  right: 20px; top: 10px;}
 #section3 .content_box ul li .robot_hole .robot {position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); transition: 0.4s; transform-origin: left; }
 
 #section3 .content_box ul li:hover .robot_hole .robot {animation:robotHover 0.1s ; }
@@ -172,12 +174,13 @@ section { padding: 120px 0;}
 #section4 .content_box > ul > li:nth-child(7) {background: #f5f4f3;}
 
 
-#section4 .centerbox1600 {display: flex; justify-content: space-between; }
+#section4 .centerbox1500 {display: flex; justify-content: space-between; }
 #section4 .site_info {width: 400px;}
-#section4 .site_info li.number {color: #fff; background: #b92023; font-size: 36px; display: inline-block; padding:4px 10px; font-family: 'PyeongChangPeace-Light';}
-#section4 .site_info li.tit {font-family: 'PyeongChangPeace-Light'; font-size: 72px; letter-spacing: 0.5em;}
+#section4 .site_info li.number {color: #fff; font-family: 'PyeongChangPeace-Light'; text-align: center; margin-bottom: 20px;}
+#section4 .site_info li.number span {background: #31754e; font-size: 36px; padding:4px 10px; font-family: 'PyeongChangPeace-Light'; }
+#section4 .site_info li.tit {font-family: 'PyeongChangPeace-Light'; font-size: 70px; letter-spacing: 0.3em; text-align: center; }
 #section4 .site_info li.text {padding: 20px 0; font-size: 20px; line-height: 1.4; color: #555; margin-bottom: 30px;}
-#section4 .site_info li.point {font-family: 'PyeongChangPeace-Light'; border-radius: 10px; background: #fff; display: flex; justify-content: center; align-items: center; padding: 10px; font-size: 28px; }
+#section4 .site_info li.point {font-family: 'PyeongChangPeace-Light'; border-radius: 10px; background: #fff; display: flex; justify-content: center; align-items: center; padding: 10px; font-size: 28px; border: 1px solid #bbb;}
 #section4 .site_info li.last {font-size: 20px;}
 #section4 .site_info li.last p {display: flex; gap: 40px;}
 #section4 .site_info li.last p .tit {width: 130px;}
@@ -187,7 +190,21 @@ section { padding: 120px 0;}
 /* #section4 .monitors img {position: relative; z-index: 1;} */
 #section4 .monitors .pc {position: absolute; width: 631px; height: 410px; background: red; top: 21px; left: 190px; transform: rotateY(-37deg) skewY(7deg) skewX(-15deg); z-index: 2; transform-origin: left bottom; overflow: hidden;}
 #section4 .monitors .pc img {width: 100%; transition: 5s; position: absolute; top: 0;}
+#section4 .monitors a.html_view {position: absolute; background: #000; color: #fff; font-size: 20px; padding: 15px 50px; bottom: 0; border-radius:  10px; left: 50px;}
 #section4 .tablet {position: absolute; width: 390px; height: 280px; top: 400px; right: 190px; z-index: 30; perspective: 2000px; }
 #section4 .tablet .screen {position: absolute; width: 380px; height: 270px; background: #1c1c1c; top: 5px; right: 5px; transform: rotateY(-30deg) skewY(7deg) skewX(-15deg); transform-origin: left;}
 #section4 .tablet .screen .scr {position: absolute; width: 360px; height: 250px; background: #fff; top: 10px; right: 10px; transform-origin: left; overflow: hidden; }
 #section4 .tablet .screen .scr img {width: 100%; position: absolute; transition: 3s;}
+
+
+#section4 li:nth-child(2) li.number span {background: #000;}
+#section4 li:nth-child(3) li.number span {background: #01244a;}
+#section4 li:nth-child(4) li.number span {background: #2a5053;}
+#section4 li:nth-child(5) li.number span {background: #b92023;}
+#section4 li:nth-child(6) li.number span {background: #d6b884;}
+
+#section4 li:nth-child(2) .monitors a.html_view {background: #000;}
+#section4 li:nth-child(3) .monitors a.html_view {background: #01244a;}
+#section4 li:nth-child(4) .monitors a.html_view {background: #2a5053;}
+#section4 li:nth-child(5) .monitors a.html_view {background: #b92023;}
+#section4 li:nth-child(6) .monitors a.html_view {background: #d6b884;}
